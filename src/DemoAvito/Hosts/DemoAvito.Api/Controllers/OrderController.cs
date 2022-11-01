@@ -23,6 +23,29 @@ public class OrderController : ControllerBase
         return await Task.FromResult(Ok());
     }
 
+
+    /// <summary>
+    /// Добавление нового объявления
+    /// </summary>
+    /// <returns></returns>
+    [HttpPost]
+    public async Task<IActionResult> PostAsync()
+    {
+        return await Task.FromResult(Ok());
+    }
+
+
+    /// <summary>
+    /// Обновление существующего объявления
+    /// </summary>
+    /// <returns></returns>
+    [HttpPut]
+    public async Task<IActionResult> UpdateAsync()
+    {
+        return await Task.FromResult(Ok());
+    }
+
+
     /// <summary>
     /// Удаление конкретного объявления
     /// </summary>
@@ -30,16 +53,6 @@ public class OrderController : ControllerBase
     /// <returns></returns>
     [HttpDelete]
     public async Task<IActionResult> DeleteAsync(Guid id)
-    {
-        return await Task.FromResult(Ok());
-    }
-
-    /// <summary>
-    /// Добавление нового объявления
-    /// </summary>
-    /// <returns></returns>
-    [HttpGet]
-    public async Task<IActionResult> GetAsync()
     {
         return await Task.FromResult(Ok());
     }
