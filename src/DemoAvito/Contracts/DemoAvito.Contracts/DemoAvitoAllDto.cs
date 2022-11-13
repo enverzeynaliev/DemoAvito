@@ -1,4 +1,7 @@
-﻿namespace DemoAvito.Contracts;
+﻿
+using DemoAvito.Domain;
+
+namespace DemoAvito.Contracts;
 /// <summary>
 /// Модель представления всех объявлений на странице(быстрый просмотр)
 /// </summary>
@@ -23,16 +26,16 @@ public class DemoAvitoAllDto
     /// <summary>
     /// Фото объявления(вообще их будет несколько)
     /// </summary>
-    public string Picture { get; set; } // тут одна картинка 
+    public Pictures Picture { get; set; } // тут одна картинка 
     /// <summary>
     /// Категория объявления
     /// </summary>
-    public string Category { get; set; } // лучше бы в бд сделать Enum ибо категорий численное кол-во
+    public IEnumerable<Categories> Category { get; set; } // лучше бы в бд сделать Enum ибо категорий численное кол-во
 
     /// <summary>
     /// Местоположение, для сортировки по городам и тд 
     /// </summary>
-    public string LocationCity { get; set; }
+    public IEnumerable<Cities> Location { get; set; }
 
     /// <summary>
     /// Цена от продавца
