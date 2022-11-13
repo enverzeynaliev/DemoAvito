@@ -1,6 +1,10 @@
+using System.Net;
+using DemoAvito.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace DemoAvito.Api.Controllers;
+
 
 /// <summary>
 /// Работа со списком объявлений
@@ -14,21 +18,33 @@ public class OrderController : ControllerBase
     }
 
     /// <summary>
-    /// Вывод всех оъявлений
+    /// Вывод  объявления
     /// </summary>
     /// <returns></returns>
-    [HttpGet]
+    [HttpGet("Get")]
+    [ProducesResponseType(typeof(IReadOnlyCollection<DemoAvitoDto>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetAsync()
     {
         return await Task.FromResult(Ok());
     }
 
+    /// <summary>
+    /// Вывод всех объявлений
+    /// </summary>
+    /// <returns></returns>
+    [HttpGet("GetAll")]
+    [ProducesResponseType(typeof(IReadOnlyCollection<DemoAvitoAllDto>), (int)HttpStatusCode.OK)]
+   
+    public async Task<IActionResult> GetAllAsync()
+    {
+        return await Task.FromResult(Ok());
+    }
 
     /// <summary>
     /// Добавление нового объявления
     /// </summary>
     /// <returns></returns>
-    [HttpPost]
+    [HttpPost("Post")]
     public async Task<IActionResult> PostAsync()
     {
         return await Task.FromResult(Ok());
@@ -39,7 +55,7 @@ public class OrderController : ControllerBase
     /// Обновление существующего объявления
     /// </summary>
     /// <returns></returns>
-    [HttpPut]
+    [HttpPut("Put")]
     public async Task<IActionResult> UpdateAsync()
     {
         return await Task.FromResult(Ok());
@@ -51,7 +67,7 @@ public class OrderController : ControllerBase
     /// </summary>
     /// <param name="id"></param>
     /// <returns></returns>
-    [HttpDelete]
+    [HttpDelete("Delete")]
     public async Task<IActionResult> DeleteAsync(Guid id)
     {
         return await Task.FromResult(Ok());
