@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace DemoAvito.Domain;
+﻿namespace DemoAvito.Domain;
 
 /// <summary>
 /// Модель описания списка картинок
