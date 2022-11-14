@@ -15,5 +15,5 @@ public class Pictures
     /// <summary>
     /// Загружаемый пользователем файл картинки
     /// </summary>
-    public IFormFile Photo { get; set; }
+    public string Photo { get; set; }
 }

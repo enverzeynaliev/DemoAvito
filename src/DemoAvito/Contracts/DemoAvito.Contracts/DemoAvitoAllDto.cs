@@ -26,16 +26,16 @@ public class DemoAvitoAllDto
     /// <summary>
     /// Фото объявления(вообще их будет несколько)
     /// </summary>
-    public Pictures Picture { get; set; } // тут одна картинка 
+    public string Picture { get; set; } // тут одна картинка 
     /// <summary>
     /// Категория объявления
     /// </summary>
-    public IEnumerable<Categories> Category { get; set; } // лучше бы в бд сделать Enum ибо категорий численное кол-во
+    public Categories Category { get; set; } // лучше бы в бд сделать Enum ибо категорий численное кол-во
 
     /// <summary>
     /// Местоположение, для сортировки по городам и тд 
     /// </summary>
-    public IEnumerable<Cities> Location { get; set; }
+    public Cities Location { get; set; }
 
     /// <summary>
     /// Цена от продавца
