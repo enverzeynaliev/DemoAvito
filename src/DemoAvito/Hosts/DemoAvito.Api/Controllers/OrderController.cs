@@ -1,8 +1,6 @@
 using System.Net;
 using DemoAvito.Contracts;
-using DemoAvito.Domain;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace DemoAvito.Api.Controllers;
 
@@ -42,61 +40,44 @@ public class OrderController : ControllerBase
     /// <summary>
     /// Добавление нового объявления
     /// </summary>
-    /// <param name="ProductId"></param>
-    /// <param name="ProductName"></param>
-    /// <param name="Description"></param>
-    /// <param name="Picture"></param>
-    /// <param name="Category"></param>
-    /// <param name="PhoneNumber"></param>
-    /// <param name="LocationCity"></param>
-    /// <param name="ProductPrice"></param>
+    /// <param name="createAdvertDto"></param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    [HttpPost("{ProductId}")]
+    [HttpPost("Create")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-    public async Task<IActionResult> PostAsyncAdvert(Guid ProductId, string ProductName, string Description,
-        IEnumerable<string> Picture, Categories Category, string PhoneNumber, Cities LocationCity, int ProductPrice,
+    public async Task<IActionResult> PostAsyncAdvert(CreateUpdateAdvertDto createAdvertDto,
         CancellationToken cancellationToken)
     {
         return await Task.FromResult(Ok());
     }
-
 
     /// <summary>
     /// Обновление существующего объявления
     /// </summary>
-    /// <param name="ProductId"></param>
-    /// <param name="ProductName"></param>
-    /// <param name="Description"></param>
-    /// <param name="Picture"></param>
-    /// <param name="Category"></param>
-    /// <param name="PhoneNumber"></param>
-    /// <param name="LocationCity"></param>
-    /// <param name="ProductPrice"></param>
+    /// <param name="updateAdvertDto"></param>
     /// <param name="cancellationToken"></param> 
     /// <returns></returns>
-    [HttpPut("{ProductId}")]
+    [HttpPut("Update")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> UpdateAsyncAdvert(Guid ProductId, string ProductName, string Description,
-        IEnumerable<string> Picture, Categories Category, string PhoneNumber, Cities LocationCity, int ProductPrice,
+    public async Task<IActionResult> UpdateAsyncAdvert(CreateUpdateAdvertDto updateAdvertDto,
         CancellationToken cancellationToken)
     {
         return await Task.FromResult(Ok());
     }
 
-
     /// <summary>
     /// Удаление конкретного объявления
     /// </summary>
-    /// <param name="ProductId"></param>
+    /// <param name="deleteAdvertDto"></param>
     /// <param name="cancellationToken"></param> 
     /// <returns></returns>
-    [HttpDelete("{ProductId}")]
+    [HttpDelete("Delete")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> DeleteAsyncAdvert(Guid ProductId, CancellationToken cancellationToken)
+    public async Task<IActionResult> DeleteAsyncAdvert([FromQuery] CreateUpdateAdvertDto deleteAdvertDto,
+        CancellationToken cancellationToken)
     {
         return await Task.FromResult(Ok());
     }
