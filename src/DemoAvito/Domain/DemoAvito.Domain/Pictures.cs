@@ -8,10 +8,16 @@ public class Pictures
     /// <summary>
     /// Идентификатор
     /// </summary>
-    public Guid Picture { get; set; }
+    public Guid PictureId { get; set; }
 
     /// <summary>
     /// Загружаемый пользователем файл картинки
     /// </summary>
+    
     public string Photo { get; set; }
+
+    /// <summary>
+    /// Связь с таблицей объявления
+    /// </summary>
+    public Adverts Advert { get; set; }
 }

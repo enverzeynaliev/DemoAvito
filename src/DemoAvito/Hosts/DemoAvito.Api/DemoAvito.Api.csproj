@@ -24,6 +24,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Contracts\DemoAvito.Contracts\DemoAvito.Contracts.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\DemoAvito.Registrar\DemoAvito.Registrar.csproj" />
     </ItemGroup>
 
 </Project>

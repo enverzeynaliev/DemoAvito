@@ -12,4 +12,8 @@ public class Categories
     /// Название категории
     /// </summary>
     public string CategoryName { get; set; }
+    /// <summary>
+    /// Связь с таблицей объявления
+    /// </summary>
+    public IEnumerable<Adverts> Advert { get; set; }
 }

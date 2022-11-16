@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DemoAvito.Api</name>
+    </assembly>
+    <members>
+        <member name="T:DemoAvito.Api.Controllers.OrderController">
+            <summary>
+            Работа со списком объявлений
+            </summary>
+        </member>
+        <member name="M:DemoAvito.Api.Controllers.OrderController.GetAsyncAdvert">
+            <summary>
+            Вывод  объявления
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DemoAvito.Api.Controllers.OrderController.GetAllAsyncAdvert">
+            <summary>
+            Вывод всех объявлений
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DemoAvito.Api.Controllers.OrderController.PostAsyncAdvert(DemoAvito.Contracts.CreateUpdateAdvertDto,System.Threading.CancellationToken)">
+            <summary>
+            Добавление нового объявления
+            </summary>
+            <param name="createAdvertDto"></param>
+            <param name="cancellationToken"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DemoAvito.Api.Controllers.OrderController.UpdateAsyncAdvert(DemoAvito.Contracts.CreateUpdateAdvertDto,System.Threading.CancellationToken)">
+            <summary>
+            Обновление существующего объявления
+            </summary>
+            <param name="updateAdvertDto"></param>
+            <param name="cancellationToken"></param> 
+            <returns></returns>
+        </member>
+        <member name="M:DemoAvito.Api.Controllers.OrderController.DeleteAsyncAdvert(DemoAvito.Contracts.CreateUpdateAdvertDto,System.Threading.CancellationToken)">
+            <summary>
+            Удаление конкретного объявления
+            </summary>
+            <param name="deleteAdvertDto"></param>
+            <param name="cancellationToken"></param> 
+            <returns></returns>
+        </member>
+    </members>
+</doc>
