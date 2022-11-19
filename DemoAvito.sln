@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.Registrar", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.Migrations", "src\DemoAvito\Infrastructure\DemoAvito.Migrations\DemoAvito.Migrations.csproj", "{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.Infrastructure", "src\DemoAvito\Infrastructure\DemoAvito.Infrastructure\DemoAvito.Infrastructure.csproj", "{E73ED402-BE55-4D1B-AE4B-E07530043EB1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,7 @@ Global
 		{868C0470-0C51-4576-A229-AE17D5269298} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
 		{D44FADDF-5009-44B4-94C5-2D583DC0994A} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
 		{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
+		{E73ED402-BE55-4D1B-AE4B-E07530043EB1} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EB0E934C-E391-4EB0-A8F4-6AF3867B9729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -67,5 +70,9 @@ Global
 		{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

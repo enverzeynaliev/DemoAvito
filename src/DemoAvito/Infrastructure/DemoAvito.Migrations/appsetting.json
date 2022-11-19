@@ -1,5 +1,5 @@
 ﻿{
   "ConnectionStrings": {
-    "PostgresAdvertDb": "Host = localhost;Database=DemoAvitoAdverts;Username=postgres;Password=postgres;"
+    "PostgresAdvertDb": "Host = localhost;Database=AdvertsDemoAvito;Username=postgres;Password=postgres"
   }
-}
+} 
