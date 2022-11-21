@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.Migrations", "src
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.Infrastructure", "src\DemoAvito\Infrastructure\DemoAvito.Infrastructure\DemoAvito.Infrastructure.csproj", "{E73ED402-BE55-4D1B-AE4B-E07530043EB1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{F8649FAE-E3B4-4A49-B2D6-5A9D1D55D696}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAvito.AppServices", "src\DemoAvito\Application\DemoAvito.AppServices\DemoAvito.AppServices.csproj", "{3C19B562-7E1F-4258-B420-DAB5263AF8DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,8 @@ Global
 		{D44FADDF-5009-44B4-94C5-2D583DC0994A} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
 		{DBCF27C3-7F62-49A3-A0BF-525B6800EDDA} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
 		{E73ED402-BE55-4D1B-AE4B-E07530043EB1} = {D1FA72BA-BF24-4B2F-B191-3C69E221915E}
+		{F8649FAE-E3B4-4A49-B2D6-5A9D1D55D696} = {34753C18-A7E9-4673-9EC2-EE61F6B9C9CB}
+		{3C19B562-7E1F-4258-B420-DAB5263AF8DF} = {F8649FAE-E3B4-4A49-B2D6-5A9D1D55D696}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{EB0E934C-E391-4EB0-A8F4-6AF3867B9729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -74,5 +80,9 @@ Global
 		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E73ED402-BE55-4D1B-AE4B-E07530043EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C19B562-7E1F-4258-B420-DAB5263AF8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C19B562-7E1F-4258-B420-DAB5263AF8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C19B562-7E1F-4258-B420-DAB5263AF8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C19B562-7E1F-4258-B420-DAB5263AF8DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

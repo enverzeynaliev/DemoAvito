@@ -24,7 +24,9 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\Application\DemoAvito.AppServices\DemoAvito.AppServices.csproj" />
       <ProjectReference Include="..\..\Contracts\DemoAvito.Contracts\DemoAvito.Contracts.csproj" />
+      <ProjectReference Include="..\DemoAvito.Infrastructure\DemoAvito.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

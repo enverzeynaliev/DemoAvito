@@ -21,6 +21,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\DemoAvito.DataAccess\DemoAvito.DataAccess.csproj" />
+      <ProjectReference Include="..\DemoAvito.Infrastructure\DemoAvito.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

@@ -70,13 +70,13 @@ public class OrderController : ControllerBase
     /// <summary>
     /// Удаление конкретного объявления
     /// </summary>
-    /// <param name="deleteAdvertDto"></param>
+    /// <param name="ProductId"></param>
     /// <param name="cancellationToken"></param> 
     /// <returns></returns>
     [HttpDelete("Delete")]
     [ProducesResponseType((int)HttpStatusCode.OK)]
     [ProducesResponseType((int)HttpStatusCode.NotFound)]
-    public async Task<IActionResult> DeleteAsyncAdvert([FromQuery] CreateUpdateAdvertDto deleteAdvertDto,
+    public async Task<IActionResult> DeleteAsyncAdvert(Guid ProductId,
         CancellationToken cancellationToken)
     {
         return await Task.FromResult(Ok());

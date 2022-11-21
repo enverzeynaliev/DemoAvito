@@ -1,5 +1,9 @@
-﻿using DemoAvito.DataAccess;
+﻿using DemoAvito.AppServices.Advert.Repositories;
+using DemoAvito.AppServices.Advert.Services;
+using DemoAvito.DataAccess;
+using DemoAvito.DataAccess.EntityConfiguration.DemoAvito;
 using DemoAvito.DataAccess.Interface;
+using DemoAvito.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,6 +18,10 @@ public static class DemoAvitoRegistrar
                 .Configure((DbContextOptionsBuilder<AdvertContext>)dbOptions)));
         services.AddSingleton<IDbContextOptionConfigurator<AdvertContext>, AdvertContextConfiguration>();
         services.AddScoped(sp=>(DbContext) sp.GetRequiredService<AdvertContext>());
+        services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+        services.AddTransient<IAdvertRepository, AdvertRepository>();
+        services.AddTransient<IAdvertService, AdvertService>();
         return services;
     }
 }
