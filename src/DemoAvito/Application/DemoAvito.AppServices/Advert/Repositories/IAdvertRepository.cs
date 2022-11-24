@@ -9,13 +9,18 @@ public interface IAdvertRepository
     /// </summary>
     /// <param name="take"></param>
     /// <param name="skip"></param>
+    /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAll(int take, int skip);
+    Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAll(int take, int skip, CancellationToken cancellationToken);
+
     /// <summary>
     /// Берем все по фильтру пользователя
     /// </summary>
+    /// <param name="request"></param>
+    /// <param name="cancellationToken"></param>
     /// <param name="take"></param>
     /// <param name="skip"></param>
     /// <returns></returns>
-    Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAllFiltered(AdvertFilterRequest request);
+    Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAllFiltered(AdvertFilterRequest request,
+        CancellationToken cancellationToken);
 }

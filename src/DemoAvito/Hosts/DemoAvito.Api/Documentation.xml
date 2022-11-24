@@ -4,6 +4,11 @@
         <name>DemoAvito.Api</name>
     </assembly>
     <members>
+        <member name="T:DemoAvito.Api.Controllers.AdvertController">
+            <summary>
+            Работа со списком объявлений
+            </summary>
+        </member>
         <member name="T:DemoAvito.Api.Controllers.OrderController">
             <summary>
             Работа со списком объявлений
@@ -37,11 +42,11 @@
             <param name="cancellationToken"></param> 
             <returns></returns>
         </member>
-        <member name="M:DemoAvito.Api.Controllers.OrderController.DeleteAsyncAdvert(DemoAvito.Contracts.CreateUpdateAdvertDto,System.Threading.CancellationToken)">
+        <member name="M:DemoAvito.Api.Controllers.OrderController.DeleteAsyncAdvert(System.Guid,System.Threading.CancellationToken)">
             <summary>
             Удаление конкретного объявления
             </summary>
-            <param name="deleteAdvertDto"></param>
+            <param name="ProductId"></param>
             <param name="cancellationToken"></param> 
             <returns></returns>
         </member>

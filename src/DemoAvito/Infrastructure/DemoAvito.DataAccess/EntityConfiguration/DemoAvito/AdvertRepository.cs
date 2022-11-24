@@ -15,7 +15,8 @@ public class AdvertRepository : IAdvertRepository
         _repository = repository;
     }
 
-    public async Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAll(int take, int skip)
+    public async Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAll(int take, int skip,
+        CancellationToken cancellationToken)
     {
         return await _repository.GetAll()
             .Select(p => new DemoAvitoAllDto
@@ -27,10 +28,11 @@ public class AdvertRepository : IAdvertRepository
                 Location = p.LocationCity,
                 CreationDate = p.CreationDate
             })
-            .Take(take).Skip(skip).ToListAsync();
+            .Take(take).Skip(skip).ToListAsync(cancellationToken);
     }
 
-    public async Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAllFiltered(AdvertFilterRequest request)
+    public async Task<IReadOnlyCollection<DemoAvitoAllDto>> GetAllFiltered(AdvertFilterRequest request,
+        CancellationToken cancellationToken)
     {
         var query = _repository.GetAll();
         if (request.ProductID.HasValue)
@@ -51,6 +53,6 @@ public class AdvertRepository : IAdvertRepository
             Category = p.Category,
             Location = p.LocationCity,
             CreationDate = p.CreationDate
-        }).ToListAsync();
+        }).ToListAsync(cancellationToken);
     }
 }
